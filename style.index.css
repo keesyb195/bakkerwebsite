@@ -1,14 +1,13 @@
-<style>
 html {
   -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
 }
 
 /* --- Change default colors --- */
 :root {
-  --color-bg-default: #000000 !important;
-  --color-text-default: #FFFFFF !important;
-  --color-text-default-light: #FFFFFF !important;
-  --color-text-gray: #B6B6B6 !important;
+  --color-bg-default: #F9F6F0 !important;
+  --color-text-default: #4B5673 !important;
+  --color-text-default-light: #4B5673 !important;
+  --color-text-gray: #959BA9 !important;
   --collection-card-cover-size-large: 210px !important;
 }
 @media screen and (min-width: 50em) {
@@ -20,46 +19,15 @@ html {
 
 /* --- TYPOGRAPHY --- */
 
-
 /* Increase base font size for large screens */
-@font-face {
-    font-family: 'untitled-sans-regular';
-    src: url('https://kinantid.github.io/tama/fonts/untitled-sans-web-regular.eot');
-    src: url('https://kinantid.github.io/tama/fonts/untitled-sans-web-regular.eot?#iefix') format('embedded-opentype'),
-         url('https://kinantid.github.io/tama/fonts/untitled-sans-web-regular.woff2') format('woff2'),
-         url('https://kinantid.github.io/tama/fonts/untitled-sans-web-regular.woff') format('woff');
-    font-weight: 400;
-    font-style: regular;
- }
-  
-@font-face {
-    font-family: 'untitled-sans-bold';
-    src: url('https://kinantid.github.io/tama/fonts/untitled-sans-web-bold.eot');
-    src: url('https://kinantid.github.io/tama/fonts/untitled-sans-web-bold.eot?#iefix') format('embedded-opentype'),
-         url('https://kinantid.github.io/tama/fonts/untitled-sans-web-bold.woff2') format('woff2'),
-         url('https://kinantid.github.io/tama/fonts/untitled-sans-web-bold.woff') format('woff');
-    font-weight: 400;
-    font-style: bold;
- }
-  
- /*
- .untitled-sans {
-    font-family: 'untitled-sans', Helvetica, sans-serif !important;
- }
-  
- .untitled-sans-bold {
-    font-family: 'untitled-sans', Helvetica, sans-serif !important;
-    font-style: bold;
- }*/
-
 @media screen and (min-width: 50em) {
   html {
     font-size: 18px !important;
   }
 }
 
-body, p {
-  font-family: 'untitled-sans-regular', Helvetica, sans-serif !important;
+body {
+  font-family: reason-new, 'Work Sans', sans-serif !important;
 
   /* Make the text nice and crisp */
   -webkit-font-smoothing: antialiased;
@@ -70,16 +38,12 @@ body, p {
 }
 
 strong {
-    font-family: 'untitled-sans-bold', Helvetica, sans-serif !important;
-    font-style: bold;
     font-weight: 500 !important;
 }
 
 /* Styling for page names */
 .notion-header__title {
-  font-family: 'untitled-sans-bold', Helvetica, sans-serif !important;
-  font-style: bold;
-  font-weight: 700 !important;
+  font-weight: 500 !important;
   font-size: 0.75rem !important;
   line-height: 1.25 !important;
   min-height: auto !important;
@@ -111,8 +75,7 @@ strong {
 
 /* H1 */
 h1.notion-heading, .notion-page__properties .notion-property__text {
-  font-family: 'untitled-sans-bold', Helvetica, sans-serif !important;
-  font-style: bold;
+  font-family: psfournier-std, 'Nanum Myeongjo', serif !important;
   font-weight: 200 !important;
   font-size: 1.875rem !important;
 }
@@ -127,16 +90,13 @@ h1.notion-heading .notion-semantic-string, .notion-page__property .notion-proper
 }
 /* H2 */
 h2.notion-heading {
-  font-family: 'untitled-sans-bold', Helvetica, sans-serif !important;
-  font-style: bold;
+  font-family: psfournier-std, 'Nanum Myeongjo', serif !important;
   font-weight: 200 !important;
   letter-spacing: -0.01em !important;
 }
 
 /* H3 */
 h3.notion-heading {
-  font-family: 'untitled-sans-bold', Helvetica, sans-serif !important;
-  font-style: bold; 
   font-weight: 500 !important;
   margin-bottom: 0.25em !important;
 }
@@ -170,9 +130,9 @@ h3.notion-heading {
 /* Custom nav styling (see HTML at bottom of code) */
 .nav {
   align-items: flex-start;
-  padding: 0.1vh; /* NOTE: Changed from 0.05vh, 25px*/
+  padding: 25px;
   display: flex;
-  position: static; /*NOTE: Reverted to static, was sticky*/
+  position: static;
   z-index: 9999;
   height: 110px;
   width: 100%;
@@ -182,7 +142,7 @@ h3.notion-heading {
 @media screen and (min-width: 30em) {
   .nav {
     align-items: center;
-    padding: 16px 40px 0 64px; /* NOTE: Changed from 0 40px and previously 25px*/
+    padding: 0 25px;
     height: 64px;
     flex-direction: row;
   }
@@ -198,7 +158,7 @@ h3.notion-heading {
   transition: all .3s ease-in-out;
   justify-content: center;
   align-items: center;
-  padding: 16px 40px 0 0;
+  padding: 0 20px 0 0;
   display: flex;
   height: 100%;
   font-size: 18px;
@@ -212,7 +172,7 @@ h3.notion-heading {
 
 /* --- Adjust the max width of pages --- */
 .super-content.max-width, .notion-header__content.max-width {
-  max-width: 1080px!important;
+  max-width: 1080px !important;
 }
 
 /* --- Remove bottom page padding and adjust page padding for smaller screens --- */
@@ -229,13 +189,13 @@ h3.notion-heading {
 /* --- Remove additional spacing on mobile that is created by column layout on desktop --- */
 @media screen and (max-width:680px) {
   .notion-column {
-    padding: 0px!important;
+    padding: 0px !important;
   }
 }
 
 /* --- Control heading spacing in column layout --- */
 .notion-column>.notion-heading {
-  margin-top: 8px !important; /* Reverted from 0.05vh */
+  margin-top: 7px !important;
 }
 
 .notion-header__icon-wrapper {
@@ -245,25 +205,25 @@ h3.notion-heading {
 
 /* --- Adjust quote styling so it can be used as a standfirst --- */
 .notion-quote {
-  border-left: 0px!important;
-  padding: 0!important;
-  margin: .5rem 0 1rem!important;
+  border-left: 0px !important;
+  padding: 0 !important;
+  margin: .5rem 0 1rem! important;
 }
 
 /* --- Change handling of full width images --- */
 .notion-image.page-width > div {
-    display: block !important;
-    margin-bottom: 6px !important;
-  }
-  
+  display: block !important;
+  margin-bottom: 6px !important;
+}
+
 .notion-image.full-width img {
-  object-fit: fill!important;
-  height: auto!important;
+  object-fit: fill !important;
+  height: auto !important;
 }
 
 /* --- Change Image caption alignment --- */
 .notion-image.page-width>figcaption, .notion-image.full-width>figcaption {
-  text-align: center!important;
+  text-align: center !important;
 }
 
 /* --- PROJECTS LISTING --- */
@@ -294,6 +254,7 @@ h3.notion-heading {
   border-radius: 0 !important;
   box-shadow: none !important;
   margin-bottom: 44px !important;
+  background: transparent !important;
 }
 @media screen and (min-width: 370px) {
   .notion-collection-card {
@@ -344,7 +305,7 @@ h3.notion-heading {
 .notion-collection-card__property .notion-semantic-string {
   display: block !important;
   margin: 0.6em 0 0.4em !important;
-  font-family: 'untitled-sans-regular', Helvertica, sans-serif !important;
+  font-family: psfournier-std, 'Nanum Myeongjo', serif !important;
   font-weight: 200 !important;
   font-size: 1.5rem !important;
   line-height: 1.3 !important;
@@ -415,7 +376,7 @@ h3.notion-heading {
   margin-top: 0 !important;
 }
 article[id*="projects-"] .notion-page__property > .property-49775679 .notion-pill {
-  font-weight: 700 !important;
+  font-weight: 600 !important;
   font-size: 0.75rem !important;
   line-height: 1.25 !important;
   min-height: auto !important;
@@ -470,12 +431,12 @@ article[id*="projects-"] .notion-page__property > .property-49775679 .notion-pil
 
 CUSTOMISING YOUR BLOG:
 
-All the styles below are appended with a conditional target, it looks like this [id*="ideas"]. What that is doing is looking for the presence of the string ideas in an id. That id is generated when you give a page a Pretty URL in Super. So long as the listing page and the article pages contain ‘writing’ in the pretty URL everything below will work fine.
+All the styles below are appended with a conditional target, it looks like this [id*="writing"]. What that is doing is looking for the presence of the string ‘writing’ in an id. That id is generated when you give a page a Pretty URL in Super. So long as the listing page and the article pages contain ‘writing’ in the pretty URL everything below will work fine.
 
-If you prefer to use a different term to ideas e.g. blog, thoughts, journal then you’ll need to first use that term for your Pretty URLs then find and replace all instances of "ideas" with your chosen term. Here’s an example:
+If you prefer to use a different term to writing e.g. blog, thoughts, journal then you’ll need to first use that term for your Pretty URLs then find and replace all instances of "writing" with your chosen term. Here’s an example:
 
-Listing view: [id*="ideas"] becomes [id*="journal"]
-Article view: [id*="ideas-"] becomes [id*="journal-"]
+Listing view: [id*="writing"] becomes [id*="journal"]
+Article view: [id*="writing-"] becomes [id*="journal-"]
 
  - - - - - - - - - - - - - - - - - - */
 
@@ -490,7 +451,7 @@ Article view: [id*="ideas-"] becomes [id*="journal-"]
 }
 
 /* Center aligns list on article listing page */
-[id*="ideas"] .notion-collection-list {
+[id*="writing"] .notion-collection-list {
   margin: 0 auto;
 }
 
@@ -505,7 +466,7 @@ Article view: [id*="ideas-"] becomes [id*="journal-"]
   .notion-collection-list__item {
     margin: 2em 0 3em 0 !important;
   }
-  [id*="ideas"] .notion-collection-list__item {
+  [id*="writing"] .notion-collection-list__item {
     margin-bottom: 5em !important;
   }
 }
@@ -528,7 +489,7 @@ Article view: [id*="ideas-"] becomes [id*="journal-"]
 .notion-collection-list__item-property .notion-semantic-string {
   white-space: normal !important;
 }
-.notion-collection-list__item-content, [id*="ideas"] .notion-collection-list__item-property .notion-property__select {
+.notion-collection-list__item-content, [id*="writing"] .notion-collection-list__item-property .notion-property__select {
   display: block !important;
 }
 .notion-property__title {
@@ -573,7 +534,7 @@ Article view: [id*="ideas-"] becomes [id*="journal-"]
   margin: 0.5em 0 1em !important;
 }
 .notion-collection-list__item-property .property-3b755650 .notion-semantic-string {
-  font-family: 'untitled-sans-regular', Helvetica, sans-serif !important;
+  font-family: psfournier-std, 'Nanum Myeongjo', serif !important;
   font-weight: 200 !important;
   font-size: 1.875rem !important;
   letter-spacing: -0.01em !important;
@@ -606,68 +567,68 @@ Article view: [id*="ideas-"] becomes [id*="journal-"]
 /* --- Article page --- */
 
 /* Set width of body and center it */
-[id*="ideas-"] .notion-page__properties, [id*="ideas-"] .notion-text, [id*="ideas-"] .notion-heading, [id*="ideas-"] .notion-quote, [id*="ideas-"] .notion-divider, [id*="ideas-"] .notion-caption, [id*="ideas-"] .notion-bulleted-list, [id*="ideas-"] .notion-numbered-list {
+[id*="writing-"] .notion-page__properties, [id*="writing-"] .notion-text, [id*="writing-"] .notion-heading, [id*="writing-"] .notion-quote, [id*="writing-"] .notion-divider, [id*="writing-"] .notion-caption, [id*="writing-"] .notion-bulleted-list, [id*="writing-"] .notion-numbered-list {
   width: 100%;
   max-width: 660px !important;
   margin-left: auto !important;
   margin-right: auto !important;
 }
-[id*="ideas-"] .notion-link, [id*="ideas-"] .notion-column-list {
+[id*="writing-"] .notion-link, [id*="writing-"] .notion-column-list {
   width: 100%;
   max-width: 660px !important;
   margin-left: auto !important;
   margin-right: auto !important;
 }
-[id*="ideas-"] .notion-page__properties {
+[id*="writing-"] .notion-page__properties {
   margin-bottom: 16px !important;
 }
 @media screen and (min-width: 680px) {
-  [id*="ideas-"] .notion-page__properties {
+  [id*="writing-"] .notion-page__properties {
     margin-bottom: 40px !important;
   }
 }
 
 /* Style date */
-[id*="ideas-"] .notion-property__date .notion-semantic-string .date {
+[id*="writing-"] .notion-property__date .notion-semantic-string .date {
   color: var(--color-text-gray) !important;
   font-size: 1rem !important;
 }
 @media screen and (min-width: 32em) {
-  [id*="ideas-"] .notion-property__date .notion-semantic-string .date {
+  [id*="writing-"] .notion-property__date .notion-semantic-string .date {
     font-size: 0.875rem !important;
   }
 }
 
 /* Style of page title can be found with heading styles */
 /* Style body titles */
-[id*="ideas-"] h2.notion-heading {
-  font-family: 'untitled-sans-bold', Helvetica, sans-serif !important;
+[id*="writing-"] h2.notion-heading {
+  font-family: reason-new, 'Work Sans', sans-serif !important;
   font-weight: 500 !important;
   letter-spacing: 0.015em !important;
   margin-top: 1.25em !important;
   margin-bottom: 0.25em !important;
   text-indent: -0.05em !important;
 }
-[id*="ideas-"] h3.notion-heading {
+[id*="writing-"] h3.notion-heading {
   margin-top: 1.75rem;
 }
 
 /* Style images */
-[id*="ideas-"] .notion-image {
+[id*="writing-"] .notion-image {
   margin-bottom: 1.25em !important;
 }
 @media screen and (min-width: 32em) {
-  [id*="ideas-"] .notion-image {
+  [id*="writing-"] .notion-image {
     margin-bottom: 2em !important;
   }
 }
-[id*="ideas-"] .notion-image.normal {
+[id*="writing-"] .notion-image.normal {
   width: 100% !important;
   max-width: 660px !important;
   margin-left: auto !important;
   margin-right: auto !important;
 }
-[id*="ideas-"] .notion-image.normal img {
+[id*="writing-"] .notion-image.normal img {
   margin: 0 auto 0.5em !important;
 }
 
@@ -685,22 +646,22 @@ figcaption a {
 }
 
 /* Control space between an image and heading */
-[id*="ideas-"] .notion-image.page-width + h2.notion-heading {
+[id*="writing-"] .notion-image.page-width + h2.notion-heading {
   margin-top: 1em !important;
 }
 
 /* Control space between body text and image */
-[id*="ideas-"] .notion-text + .notion-image {
+[id*="writing-"] .notion-text + .notion-image {
   margin-top: 1.25em !important;
 }
 @media screen and (min-width: 32em) {
-  [id*="ideas-"] .notion-text + .notion-image {
+  [id*="writing-"] .notion-text + .notion-image {
     margin-top: 2em !important;
   }
 }
 
 /* Style quotes */
-[id*="ideas-"] .notion-quote {
+[id*="writing-"] .notion-quote {
   margin-top: 1.25em !important;
   margin-bottom: 1.25em !important;
   padding-left: 1.5em !important;
@@ -714,13 +675,13 @@ figcaption a {
 }
 
 /* Style dividers to display as centered ellipsis */
-[id*="ideas-"] .notion-divider {
+[id*="writing-"] .notion-divider {
   border-bottom: none !important;
   margin: 0 auto !important;
   text-align: center;
   font-size: 1.25rem;
 }
-[id*="ideas-"] .notion-divider::before {
+[id*="writing-"] .notion-divider::before {
   content:"· · ·";
 }
 
@@ -739,8 +700,6 @@ animation: fadeIn 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s both;
   -o-animation: fadeIn 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s both;
   -ms-animation: fadeIn 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s both;
 }
-
-/* TODO: ADD SLIDE UP ANIMATION */
 @keyframes fadeIn {
   0% {opacity:0;}
   100% {opacity:1;}
@@ -800,4 +759,3 @@ animation: fadeIn 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s both;
 .notion-collection-table__cell .notion-semantic-string {
   white-space: normal !important;
 }
-</style>
